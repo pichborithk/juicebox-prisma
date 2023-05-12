@@ -7,6 +7,9 @@ import {
   getAllUsers,
   getAllPosts,
   getPostById,
+  getPostsByUser,
+  getPostsByTagName,
+  updatePost,
 } from '.';
 
 async function seed() {
@@ -70,7 +73,11 @@ async function seed() {
 // seed().catch(error => console.error(error));
 
 async function testDB() {
-  const posts = await getPostById(2);
+  const posts = await updatePost(2, {
+    title: 'test1',
+    content: 'test1',
+    tags: ['test1'],
+  });
   console.log(posts);
 }
 
