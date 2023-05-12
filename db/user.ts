@@ -1,13 +1,14 @@
+import { Prisma } from '@prisma/client';
 import { db } from '.';
 
-type UserData = {
+export type UserData = {
   username: string;
   password: string;
   name: string;
   location: string;
 };
 
-export async function createUser(data: UserData) {
+export async function createUser(data: Prisma.userCreateInput) {
   const user = await db.user.create({
     data: data,
   });

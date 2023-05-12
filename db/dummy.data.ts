@@ -19,6 +19,12 @@ export const userList = [
   },
 ];
 
+export type Post = {
+  title: string;
+  content: string;
+  tags: string[];
+};
+
 export const postList = [
   {
     title: 'First Post',

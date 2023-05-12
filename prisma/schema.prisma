@@ -17,16 +17,18 @@ model user {
   name     String
   location String
   active   Boolean @default(true)
-  post     post?   @relation(fields: [postId], references: [id])
-  postId   Int?
+
+  posts post[]
 }
 
 model post {
-  id       Int     @id @default(autoincrement())
-  authorId user[]
-  title    String
-  content  String
-  active   Boolean @default(true)
+  id      Int     @id @default(autoincrement())
+  title   String
+  content String
+  active  Boolean @default(true)
+
+  user     user @relation(fields: [authorId], references: [id])
+  authorId Int
 
   tags tag[]
 }
