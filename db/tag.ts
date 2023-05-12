@@ -6,7 +6,6 @@ export async function createTags(tagList: string[]) {
     tagList.map(async tag => {
       const existingTag = await db.tag.findUnique({ where: { name: tag } });
       if (existingTag) {
-        console.log(existingTag);
         return existingTag;
       } else {
         return await db.tag.create({
@@ -16,7 +15,5 @@ export async function createTags(tagList: string[]) {
     })
   );
 
-  // tags.forEach(tag => console.log(tag));
-  // console.log(tags);
   return tags;
 }
