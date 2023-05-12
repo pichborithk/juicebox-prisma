@@ -1,21 +1,65 @@
+import { faker } from '@faker-js/faker';
+
 export const userList = [
   {
-    username: 'albert',
-    password: 'bertie99',
-    name: 'Al Bert',
-    location: 'Sidney, Australia',
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
   },
   {
-    username: 'sandra',
-    password: '2sandy4me',
-    name: 'Just Sandra',
-    location: 'Chamois, Italy',
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
   },
   {
-    username: 'killer',
-    password: 'k1l3',
-    name: 'kyle',
-    location: 'Florida, US',
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: faker.location.state(),
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: ` ${faker.location.state()}`,
+  },
+  {
+    username: faker.internet.userName(),
+    password: faker.internet.password(),
+    name: faker.person.firstName(),
+    location: ` ${faker.location.state()}`,
   },
 ];
 
@@ -27,19 +71,53 @@ export type Post = {
 
 export const postList = [
   {
-    title: 'First Post',
-    content:
-      'This is my first post. I hope I love writing blogs as much as I love writing them.',
-    tags: ['#happy', '#you-can-do-anything'],
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#happy', '#laugh'],
   },
   {
-    title: 'How does this work?',
-    content: 'Seriously, does this even do anything?',
-    tags: ['#happy', '#worst-day-ever'],
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#sad', '#worried'],
   },
   {
-    title: 'Living the Glam Life',
-    content: 'Do you even? I swear that half of you are posing.',
-    tags: ['#happy', '#you-can-do-anything', '#can-man-do-everything'],
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#happy', '#care'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#sad', '#faked'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#worried', '#faked', '#sad'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#happy', '#love'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#laugh', '#love'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#love', '#faked'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#care', '#worried'],
+  },
+  {
+    title: faker.lorem.word(10),
+    content: faker.lorem.sentence(10),
+    tags: ['#happy', '#sad'],
   },
 ];
